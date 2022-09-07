@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
 import Header from '../components/home/header/Header';
-import LogosContainer from '../components/home/header/LogosContainer';
+import Section1 from '../components/home/section1/Section1';
 
 function Home() {
   return (
     <HomeWrapper>
       <Header />
+      <Section1 />
     </HomeWrapper>
   );
 }

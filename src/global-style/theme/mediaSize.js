@@ -1,3 +1,5 @@
-export const contentsArea = {
-  large: '1170px',
+const contentsArea = {
+  xLarge: '1170px',
 };
+
+export const contentsAreaXLarge = contentsArea.xLarge;
