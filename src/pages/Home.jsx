@@ -4,6 +4,7 @@ import Header from '../components/home/header/Header';
 import Section1 from '../components/home/section1/Section1';
 import Seciton2 from '../components/home/section2/Section2';
 import Section3 from '../components/home/section3/Section3';
+import Section4 from '../components/home/section4/Section4';
 
 function Home() {
   return (
@@ -12,6 +13,7 @@ function Home() {
       <Section1 />
       <Seciton2 />
       <Section3 />
+      <Section4 />
     </HomeWrapper>
   );
 }
