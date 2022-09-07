@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import HeaderBackground from './HeaderBackground';
 import NavBar from './NavBar';
 import HeaderContent from './HeaderContent';
+import LogosContainer from './LogosContainer';
 
 function Header() {
   return (
@@ -10,6 +11,7 @@ function Header() {
       <ContentsArea>
         <NavBar />
         <HeaderContent />
+        <LogosContainer />
       </ContentsArea>
     </HeaderWrapper>
   );
