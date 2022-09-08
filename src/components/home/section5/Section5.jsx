@@ -21,6 +21,7 @@ export default Section5;
 
 const Section5Wrapper = styled.section`
   margin-top: 140px;
+  margin-bottom: 156px;
 `;
 
 const ContentsArea = styled.div`

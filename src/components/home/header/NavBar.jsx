@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import Logo from '../../common/Logo';
 
 function NavBar() {
   return (
     <NavBarWrapper>
       <h1>
-        <Logo href="">CONSTRUCTION</Logo>
+        <Logo />
       </h1>
       <Nav>
         <NavContent href="">Home</NavContent>
@@ -23,12 +24,6 @@ const NavBarWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
-`;
-
-const Logo = styled.a`
-  color: #40a2d5;
-  font-weight: 600;
-  font-size: 25px; //Logo 고정된 크기. rem 사용하지 않음.
 `;
 
 const Nav = styled.nav`
