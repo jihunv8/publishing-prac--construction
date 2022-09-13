@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { screenLarge } from '../../../global-style/theme/mediaSize';
 
 import image from '../../../images/section1-image.png';
 import Content from './Content';
@@ -36,15 +37,20 @@ const Section1ContentsWrapper = styled.div`
 `;
 
 const Image = styled.div`
-  background: url(${image}) no-repeat;
+  background: url(${image}) no-repeat center / contain;
   width: 584px;
   height: 850px;
   flex-shrink: 0;
+
+  @media screen and (max-width: ${screenLarge}) {
+    width: 399px;
+    height: 581px;
+  }
 `;
 
 const ContentsContainer = styled.div`
-  height: 614px;
-  margin-top: 145px;
+  height: 500px;
+  margin-top: 50px;
   margin-left: 68px;
   display: flex;
   flex-direction: column;

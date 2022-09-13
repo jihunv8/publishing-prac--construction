@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { screenLarge } from '../../../global-style/theme/mediaSize';
 import CommonButton from '../../common/buttons/CommonButton.styled';
 
 function Section1Header() {
@@ -34,6 +35,10 @@ const Title = styled.h2`
 const HeaderContent = styled.div`
   order: 0;
   width: 540px;
+
+  @media screen and (max-width: ${screenLarge}) {
+    width: 400px;
+  }
 `;
 
 const Text = styled.p`
