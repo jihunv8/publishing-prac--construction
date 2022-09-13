@@ -2,25 +2,28 @@ import styled, { css } from 'styled-components';
 
 import backgroundImage from '../../../images/section3-bg.png';
 import bigDoubleQuote from '../../../images/icons/big-double-quote.png';
+import { screenLarge } from '../../../global-style/theme/mediaSize';
 
 function Section3() {
   return (
     <Section3Wrapper>
       <Background>
-        <Title>Message from CEO</Title>
-        <Text>
-          Shewing met parties gravity husband sex pleased. On to no kind do next feel held walk. Last own loud and knew
-          give gay four. Sentiments motionless or principles preference excellence am. Literature surrounded insensible
-          at indulgence or to admiration remarkably. Matter future lovers desire marked boy use. Chamber reached do he
-          nothing be.
-          <br />
-          <br />
-          Do in laughter securing smallest sensible no mr hastened. As perhaps proceed in in brandon of limited unknown
-          greatly. Distrusts fulfilled happiness unwilling as explained of difficult. No landlord of peculiar ladyship
-          attended if contempt ecstatic. Loud wish made on is am as hard. Court so avoid in plate hence. Of received mr
-          breeding concerns peculiar securing landlord. Spot to many it four bred soon well to. Or am promotion in no
-          departure abilities. Whatever landlord yourself at by pleasure of children be.
-        </Text>
+        <Contents>
+          <Title>Message from CEO</Title>
+          <Text>
+            Shewing met parties gravity husband sex pleased. On to no kind do next feel held walk. Last own loud and
+            knew give gay four. Sentiments motionless or principles preference excellence am. Literature surrounded
+            insensible at indulgence or to admiration remarkably. Matter future lovers desire marked boy use. Chamber
+            reached do he nothing be.
+            <br />
+            <br />
+            Do in laughter securing smallest sensible no mr hastened. As perhaps proceed in in brandon of limited
+            unknown greatly. Distrusts fulfilled happiness unwilling as explained of difficult. No landlord of peculiar
+            ladyship attended if contempt ecstatic. Loud wish made on is am as hard. Court so avoid in plate hence. Of
+            received mr breeding concerns peculiar securing landlord. Spot to many it four bred soon well to. Or am
+            promotion in no departure abilities. Whatever landlord yourself at by pleasure of children be.
+          </Text>
+        </Contents>
       </Background>
     </Section3Wrapper>
   );
@@ -35,8 +38,18 @@ const Section3Wrapper = styled.section`
 const Background = styled.div`
   margin: 0 auto;
   background: url(${backgroundImage}) no-repeat center / cover;
-  width: 1440px;
-  padding: 176px 292px 300px;
+  max-width: 1440px;
+`;
+
+const Contents = styled.div`
+  width: 860px;
+  margin: 0 auto;
+  padding-top: 176px;
+  padding-bottom: 300px;
+
+  @media screen and (max-width: ${screenLarge}) {
+    width: 760px;
+  }
 `;
 
 const Title = styled.h2`
