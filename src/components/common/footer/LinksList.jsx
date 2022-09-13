@@ -6,7 +6,7 @@ function LinksList({ title = '', linksList = [] }) {
       <Title>{title}</Title>
       <LinksContainer>
         {linksList.map((link) => (
-          <Link href={link.hrek}>{link.name}</Link>
+          <Link href={link.href}>{link.name}</Link>
         ))}
       </LinksContainer>
     </div>
