@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { screenLarge } from '../../../global-style/theme/mediaSize';
 
 import logoAsana from '../../../images/logo-asana.png';
 import logoBuzzfeed from '../../../images/logo-buzzfeed.png';
@@ -30,4 +31,11 @@ const LogosContainerWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: ${screenLarge}) {
+    margin-top: 50px;
+    width: 940px;
+    height: 140px;
+    padding: 45px 60px;
+  }
 `;

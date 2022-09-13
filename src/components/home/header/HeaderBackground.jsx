@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { screenLarge } from '../../../global-style/theme/mediaSize';
 
 import image from '../../../images/millo-lin.png';
 
@@ -19,6 +20,10 @@ export default HeaderBackground;
 const HeaderBackgroundArea = styled.div`
   width: 1340px;
   margin: 0 auto;
+
+  @media screen and (max-width: ${screenLarge}) {
+    width: 1040px;
+  }
 `;
 
 const Background = styled.div`
@@ -38,6 +43,11 @@ const Image = styled.div`
   height: 850px;
   background: url(${image}) no-repeat center / cover;
   border-radius: 10px 10px 10px 300px;
+
+  @media screen and (max-width: ${screenLarge}) {
+    width: 536px;
+    height: 720px;
+  }
 `;
 
 const Shape = styled.div`
@@ -51,6 +61,10 @@ const Shape1 = styled(Shape)`
   height: 213px;
   margin-top: 97px;
   border-radius: 106.5px 0 0 5px;
+
+  @media screen and (max-width: ${screenLarge}) {
+    width: 75px;
+  }
 `;
 
 const Shape2 = styled(Shape)`
@@ -60,4 +74,8 @@ const Shape2 = styled(Shape)`
   margin-right: 26px;
   margin-left: auto;
   border-radius: 0 0 106.5px 5px;
+
+  @media screen and (max-width: ${screenLarge}) {
+    height: 73px;
+  }
 `;

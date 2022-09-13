@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { screenLarge } from '../../../global-style/theme/mediaSize';
 
 import CommonButton from '../../common/buttons/CommonButton.styled';
 import CumulativeData from './CumulativeData';
@@ -48,6 +49,10 @@ const Text = styled.p`
   color: #6b6b6b;
   font-size: 1.125rem;
   line-height: 1.75rem;
+
+  @media screen and (max-width: ${screenLarge}) {
+    width: 420px;
+  }
 `;
 
 const ButtonContainer = styled.div`

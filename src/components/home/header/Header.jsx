@@ -3,6 +3,7 @@ import HeaderBackground from './HeaderBackground';
 import NavBar from './NavBar';
 import HeaderContent from './HeaderContent';
 import LogosContainer from './LogosContainer';
+import { contentsAreaLarge, contentsAreaXLarge, screenLarge } from '../../../global-style/theme/mediaSize';
 
 function Header() {
   return (
@@ -24,7 +25,12 @@ const HeaderWrapper = styled.header`
 `;
 
 const ContentsArea = styled.div`
-  width: 1170px;
+  width: ${contentsAreaXLarge};
   margin: -933px auto 0;
   position: relative;
+
+  @media screen and (max-width: ${screenLarge}) {
+    width: ${contentsAreaLarge};
+    margin-top: -793px;
+  }
 `;
