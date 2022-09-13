@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { contentsAreaXLarge } from '../../../global-style/theme/mediaSize';
+import { contentsAreaLarge, contentsAreaXLarge, screenLarge } from '../../../global-style/theme/mediaSize';
 import FooterHeader from './FooterHeader';
 import InputMail from './InputMail';
 import LinksList from './LinksList';
@@ -25,7 +25,7 @@ const companyLinksList = {
 
 function Footer() {
   return (
-    <FooterWrapper>
+    <footer>
       <ContentsArea>
         <MainContents>
           <FooterHeader />
@@ -36,17 +36,19 @@ function Footer() {
         <Line />
         <Copyright>Copyright construction.com, All rights reserved.</Copyright>
       </ContentsArea>
-    </FooterWrapper>
+    </footer>
   );
 }
 
 export default Footer;
 
-const FooterWrapper = styled.footer``;
-
 const ContentsArea = styled.div`
   width: ${contentsAreaXLarge};
   margin: 0 auto;
+
+  @media screen and (max-width: ${screenLarge}) {
+    width: ${contentsAreaLarge};
+  }
 `;
 
 const MainContents = styled.div`
