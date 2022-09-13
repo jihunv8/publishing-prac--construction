@@ -22,7 +22,7 @@ const HeaderBackgroundArea = styled.div`
   margin: 0 auto;
 
   @media screen and (max-width: ${screenLarge}) {
-    width: 1040px;
+    width: 1140px;
   }
 `;
 
@@ -45,8 +45,7 @@ const Image = styled.div`
   border-radius: 10px 10px 10px 300px;
 
   @media screen and (max-width: ${screenLarge}) {
-    width: 536px;
-    height: 720px;
+    width: 560px;
   }
 `;
 
@@ -61,10 +60,6 @@ const Shape1 = styled(Shape)`
   height: 213px;
   margin-top: 97px;
   border-radius: 106.5px 0 0 5px;
-
-  @media screen and (max-width: ${screenLarge}) {
-    width: 75px;
-  }
 `;
 
 const Shape2 = styled(Shape)`
@@ -74,8 +69,4 @@ const Shape2 = styled(Shape)`
   margin-right: 26px;
   margin-left: auto;
   border-radius: 0 0 106.5px 5px;
-
-  @media screen and (max-width: ${screenLarge}) {
-    height: 73px;
-  }
 `;

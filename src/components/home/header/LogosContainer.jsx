@@ -33,7 +33,6 @@ const LogosContainerWrapper = styled.div`
   align-items: center;
 
   @media screen and (max-width: ${screenLarge}) {
-    margin-top: 50px;
     width: 940px;
     height: 140px;
     padding: 45px 60px;

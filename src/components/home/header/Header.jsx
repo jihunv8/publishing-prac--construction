@@ -31,6 +31,5 @@ const ContentsArea = styled.div`
 
   @media screen and (max-width: ${screenLarge}) {
     width: ${contentsAreaLarge};
-    margin-top: -793px;
   }
 `;
