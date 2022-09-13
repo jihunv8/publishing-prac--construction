@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { screenLarge } from '../../../global-style/theme/mediaSize';
 import { getProp } from '../../../utils/styledUtil';
 import CommonButton from '../../common/buttons/CommonButton.styled';
 
@@ -23,6 +24,11 @@ const BlogCardWrapper = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+
+  @media screen and (max-width: ${screenLarge}) {
+    width: 394px;
+    height: 371px;
+  }
 `;
 
 const Title = styled.h3`

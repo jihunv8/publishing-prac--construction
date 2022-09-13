@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { contentsAreaXLarge } from '../../../global-style/theme/mediaSize';
+import { contentsAreaLarge, contentsAreaXLarge, screenLarge } from '../../../global-style/theme/mediaSize';
 
 import Section5Article from './Section5Article';
 import Section5Footer from './Section5Footer';
@@ -27,4 +27,8 @@ const Section5Wrapper = styled.section`
 const ContentsArea = styled.div`
   width: ${contentsAreaXLarge};
   margin: 0 auto;
+
+  @media screen and (max-width: ${screenLarge}) {
+    width: ${contentsAreaLarge};
+  }
 `;
