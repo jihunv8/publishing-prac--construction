@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { contentsAreaXLarge } from '../../../global-style/theme/mediaSize';
+import { contentsAreaLarge, contentsAreaXLarge, screenLarge } from '../../../global-style/theme/mediaSize';
 
 import Form from './Form';
 import Section4Header from './Section4Header';
@@ -29,6 +29,10 @@ const Section4Wrapper = styled.section`
 const ContentsArea = styled.div`
   width: ${contentsAreaXLarge};
   margin: 0 auto;
+
+  @media screen and (max-width: ${screenLarge}) {
+    width: ${contentsAreaLarge};
+  }
 `;
 
 const Seciton4Article = styled.article`
@@ -40,4 +44,8 @@ const Seciton4Article = styled.article`
 const Image = styled.img`
   width: 600px;
   object-fit: contain;
+
+  @media screen and (max-width: ${screenLarge}) {
+    width: 520px;
+  }
 `;

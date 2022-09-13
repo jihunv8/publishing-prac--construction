@@ -18,10 +18,10 @@ function Form() {
 export default Form;
 
 const FormWrapper = styled.div`
-  width: 490px;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
+  flex-grow: 1;
 `;
 
 const Input = css`
