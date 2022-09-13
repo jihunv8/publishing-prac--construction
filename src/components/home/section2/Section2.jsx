@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { contentsAreaXLarge } from '../../../global-style/theme/mediaSize';
+import { contentsAreaLarge, contentsAreaXLarge, screenLarge } from '../../../global-style/theme/mediaSize';
 
 import EngineersList from './EngineersList';
 import Section2Header from './Section2Header';
@@ -29,6 +29,10 @@ const Seciton2Wrapper = styled.section`
 const ContentsArea = styled.div`
   width: ${contentsAreaXLarge};
   margin: 0 auto;
+
+  @media screen and (max-width: ${screenLarge}) {
+    width: ${contentsAreaLarge};
+  }
 `;
 
 const ButtonContainer = styled.div`
