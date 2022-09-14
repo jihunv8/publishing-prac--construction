@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { screenLarge } from '../../../global-style/theme/mediaSize';
+import { screenLarge, screenMiddle, screenSmall, screenXSmall } from '../../../global-style/theme/mediaSize';
 
 import CommonButton from '../../common/buttons/CommonButton.styled';
 import CumulativeData from './CumulativeData';
@@ -15,7 +15,7 @@ function HeaderContent() {
       </Text>
       <ButtonContainer>
         <CommonButton inversion>Explore </CommonButton>
-        <CommonButton>Contact Us</CommonButton>
+        <CommonButtonWithMargin>Contact Us</CommonButtonWithMargin>
       </ButtonContainer>
       <DataContainer>
         <CumulativeData data="25,356" dataName="Projects Done" />
@@ -31,6 +31,20 @@ export default HeaderContent;
 const HeaderContentWrapper = styled.div`
   margin-top: 118px;
   padding: 0 20px;
+
+  @media screen and (max-width: ${screenMiddle}) {
+    margin-top: 80px;
+    padding: 0 10px;
+  }
+
+  @media screen and (max-width: ${screenSmall}) {
+    margin-top: 50px;
+  }
+
+  @media screen and (max-width: ${screenXSmall}) {
+    margin-top: 80px;
+    padding: 0;
+  }
 `;
 
 const Title = styled.h2`
@@ -38,8 +52,24 @@ const Title = styled.h2`
   color: #313131;
   font-size: 4rem;
   line-height: 1.2;
+
   > span {
     color: #40a2d5;
+  }
+
+  @media screen and (max-width: ${screenMiddle}) {
+    width: 500px;
+    font-size: 3.5rem;
+  }
+
+  @media screen and (max-width: ${screenSmall}) {
+    width: 400px;
+    font-size: 2.5rem;
+  }
+
+  @media screen and (max-width: ${screenXSmall}) {
+    width: 300px;
+    font-size: 2rem;
   }
 `;
 
@@ -53,6 +83,19 @@ const Text = styled.p`
   @media screen and (max-width: ${screenLarge}) {
     width: 420px;
   }
+
+  @media screen and (max-width: ${screenMiddle}) {
+    margin-top: 50px;
+  }
+
+  @media screen and (max-width: ${screenSmall}) {
+    width: 250px;
+    font-size: 1rem;
+  }
+
+  @media screen and (max-width: ${screenXSmall}) {
+    width: auto;
+  }
 `;
 
 const ButtonContainer = styled.div`
@@ -60,6 +103,17 @@ const ButtonContainer = styled.div`
   width: 443px;
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: ${screenXSmall}) {
+    width: auto;
+    flex-wrap: wrap;
+  }
+`;
+
+const CommonButtonWithMargin = styled(CommonButton)`
+  @media screen and (max-width: ${screenXSmall}) {
+    margin-top: 20px;
+  }
 `;
 
 const DataContainer = styled.div`
@@ -67,4 +121,9 @@ const DataContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 90px;
+
+  @media screen and (max-width: ${screenSmall}) {
+    width: auto;
+    font-size: 2.5rem;
+  }
 `;

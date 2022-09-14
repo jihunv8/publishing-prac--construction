@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { screenLarge } from '../../../global-style/theme/mediaSize';
+import { screenLarge, screenMiddle, screenSmall, screenXSmall } from '../../../global-style/theme/mediaSize';
 
 import image from '../../../images/millo-lin.png';
 
@@ -24,6 +24,18 @@ const HeaderBackgroundArea = styled.div`
   @media screen and (max-width: ${screenLarge}) {
     width: 1140px;
   }
+
+  @media screen and (max-width: ${screenMiddle}) {
+    width: 790px;
+  }
+
+  @media screen and (max-width: ${screenSmall}) {
+    width: 580px;
+  }
+
+  @media screen and (max-width: ${screenXSmall}) {
+    width: 340px;
+  }
 `;
 
 const Background = styled.div`
@@ -47,6 +59,24 @@ const Image = styled.div`
   @media screen and (max-width: ${screenLarge}) {
     width: 560px;
   }
+
+  @media screen and (max-width: ${screenMiddle}) {
+    width: 420px;
+    height: 450px;
+    border-bottom-left-radius: 250px;
+  }
+
+  @media screen and (max-width: ${screenSmall}) {
+    width: 300px;
+    height: 400px;
+    border-bottom-left-radius: 200px;
+  }
+
+  @media screen and (max-width: ${screenXSmall}) {
+    width: 100px;
+    height: 160px;
+    border-bottom-left-radius: 50px;
+  }
 `;
 
 const Shape = styled.div`
@@ -60,6 +90,16 @@ const Shape1 = styled(Shape)`
   height: 213px;
   margin-top: 97px;
   border-radius: 106.5px 0 0 5px;
+
+  @media screen and (max-width: ${screenMiddle}) {
+    margin-top: 60px;
+    height: 160px;
+    width: 70px;
+  }
+
+  @media screen and (max-width: ${screenXSmall}) {
+    display: none;
+  }
 `;
 
 const Shape2 = styled(Shape)`
@@ -69,4 +109,8 @@ const Shape2 = styled(Shape)`
   margin-right: 26px;
   margin-left: auto;
   border-radius: 0 0 106.5px 5px;
+
+  @media screen and (max-width: ${screenMiddle}) {
+    display: none;
+  }
 `;
