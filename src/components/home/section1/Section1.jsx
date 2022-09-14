@@ -1,5 +1,15 @@
 import styled from 'styled-components';
-import { contentsAreaLarge, contentsAreaXLarge, screenLarge } from '../../../global-style/theme/mediaSize';
+import {
+  contentsAreaLarge,
+  contentsAreaMiddle,
+  contentsAreaSmall,
+  contentsAreaXLarge,
+  contentsAreaXSmall,
+  screenLarge,
+  screenMiddle,
+  screenSmall,
+  screenXSmall,
+} from '../../../global-style/theme/mediaSize';
 import Section1Contents from './Section1Contents';
 import Section1Header from './Section1Header';
 
@@ -23,5 +33,17 @@ const ContentsArea = styled.div`
 
   @media screen and (max-width: ${screenLarge}) {
     width: ${contentsAreaLarge};
+  }
+
+  @media screen and (max-width: ${screenMiddle}) {
+    width: ${contentsAreaMiddle};
+  }
+
+  @media screen and (max-width: ${screenSmall}) {
+    width: ${contentsAreaSmall};
+  }
+
+  @media screen and (max-width: ${screenXSmall}) {
+    width: ${contentsAreaXSmall};
   }
 `;

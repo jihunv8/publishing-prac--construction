@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { screenLarge } from '../../../global-style/theme/mediaSize';
+import { screenLarge, screenMiddle, screenSmall, screenXSmall } from '../../../global-style/theme/mediaSize';
 import CommonButton from '../../common/buttons/CommonButton.styled';
 
 function Section1Header() {
@@ -21,6 +21,10 @@ export default Section1Header;
 const Section1HeaderWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: ${screenMiddle}) {
+    flex-direction: column;
+  }
 `;
 
 const Title = styled.h2`
@@ -30,6 +34,21 @@ const Title = styled.h2`
   font-size: 3.375rem;
   font-weight: 500;
   line-height: 4.05rem;
+
+  @media screen and (max-width: ${screenMiddle}) {
+    width: auto;
+    order: 0;
+  }
+
+  @media screen and (max-width: ${screenSmall}) {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  @media screen and (max-width: ${screenXSmall}) {
+    font-size: 1.75rem;
+    line-height: 2.1rem;
+  }
 `;
 
 const HeaderContent = styled.div`
@@ -39,6 +58,12 @@ const HeaderContent = styled.div`
   @media screen and (max-width: ${screenLarge}) {
     width: 400px;
   }
+
+  @media screen and (max-width: ${screenMiddle}) {
+    margin-top: 40px;
+    width: auto;
+    order: 1;
+  }
 `;
 
 const Text = styled.p`
@@ -46,4 +71,8 @@ const Text = styled.p`
   font-size: 1.125rem;
   line-height: 1.75rem;
   margin-bottom: 30px;
+
+  @media screen and (max-width: ${screenXSmall}) {
+    font-size: 1rem;
+  }
 `;

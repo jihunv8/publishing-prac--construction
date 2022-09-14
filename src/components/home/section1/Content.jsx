@@ -1,12 +1,9 @@
 import styled from 'styled-components';
+import { screenXSmall } from '../../../global-style/theme/mediaSize';
 
 import NumberBox from './NumberBox';
 
-function Content({
-  num = '01',
-  shapeColor = 'tomato',
-  text = 'And residence for met the estimable disposing. Mean if he they been no hold mr. Is at much do made took held help.',
-}) {
+function Content({ num = '', shapeColor = '', text = '' }) {
   return (
     <ContentWrapper>
       <NumberBox num={num} shapeColor={shapeColor} />
@@ -21,6 +18,10 @@ const ContentWrapper = styled.div`
   height: fit-content;
   display: flex;
   align-items: flex-end;
+
+  @media screen and (max-width: ${screenXSmall}) {
+    align-items: flex-start;
+  }
 `;
 
 const Text = styled.p`
@@ -28,4 +29,10 @@ const Text = styled.p`
   font-size: 1.125rem;
   line-height: 1.75rem;
   margin-left: 37px;
+
+  @media screen and (max-width: ${screenXSmall}) {
+    font-size: 0.875rem;
+    line-height: 1.35rem;
+    margin-left: 20px;
+  }
 `;

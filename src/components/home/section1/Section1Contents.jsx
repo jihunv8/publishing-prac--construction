@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { screenLarge } from '../../../global-style/theme/mediaSize';
+import { screenLarge, screenMiddle, screenSmall, screenXSmall } from '../../../global-style/theme/mediaSize';
 
 import image from '../../../images/section1-image.png';
 import Content from './Content';
@@ -34,10 +34,15 @@ export default Section1Contents;
 const Section1ContentsWrapper = styled.div`
   margin-top: 110px;
   display: flex;
+
+  @media screen and (max-width: ${screenMiddle}) {
+    flex-direction: column;
+  }
 `;
 
 const Image = styled.div`
-  background: url(${image}) no-repeat center / contain;
+  border-top-right-radius: 200px;
+  background: url(${image}) no-repeat center / cover;
   width: 584px;
   height: 850px;
   flex-shrink: 0;
@@ -45,6 +50,20 @@ const Image = styled.div`
   @media screen and (max-width: ${screenLarge}) {
     width: 399px;
     height: 581px;
+  }
+
+  @media screen and (max-width: ${screenMiddle}) {
+    width: auto;
+    height: 400px;
+  }
+
+  @media screen and (max-width: ${screenSmall}) {
+    height: 300px;
+  }
+
+  @media screen and (max-width: ${screenSmall}) {
+    border-top-right-radius: 140px;
+    height: 200px;
   }
 `;
 
@@ -55,4 +74,12 @@ const ContentsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media screen and (max-width: ${screenMiddle}) {
+    margin-left: 0;
+  }
+
+  @media screen and (max-width: ${screenXSmall}) {
+    height: 400px;
+  }
 `;
