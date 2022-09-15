@@ -1,19 +1,26 @@
 import styled from 'styled-components';
+import { screenSmall } from '../../../global-style/theme/mediaSize';
 
 function LinksList({ title = '', linksList = [] }) {
   return (
-    <div>
+    <LinksListWrapper>
       <Title>{title}</Title>
       <LinksContainer>
         {linksList.map((link) => (
           <Link href={link.href}>{link.name}</Link>
         ))}
       </LinksContainer>
-    </div>
+    </LinksListWrapper>
   );
 }
 
 export default LinksList;
+
+const LinksListWrapper = styled.div`
+  @media screen and (max-width: ${screenSmall}) {
+    order: 2;
+  }
+`;
 
 const Title = styled.h2`
   color: #313131;

@@ -1,5 +1,15 @@
 import styled from 'styled-components';
-import { contentsAreaLarge, contentsAreaXLarge, screenLarge } from '../../../global-style/theme/mediaSize';
+import {
+  contentsAreaLarge,
+  contentsAreaMiddle,
+  contentsAreaSmall,
+  contentsAreaXLarge,
+  contentsAreaXSmall,
+  screenLarge,
+  screenMiddle,
+  screenSmall,
+  screenXSmall,
+} from '../../../global-style/theme/mediaSize';
 import FooterHeader from './FooterHeader';
 import InputMail from './InputMail';
 import LinksList from './LinksList';
@@ -49,11 +59,36 @@ const ContentsArea = styled.div`
   @media screen and (max-width: ${screenLarge}) {
     width: ${contentsAreaLarge};
   }
+
+  @media screen and (max-width: ${screenMiddle}) {
+    width: ${contentsAreaMiddle};
+  }
+
+  @media screen and (max-width: ${screenSmall}) {
+    width: ${contentsAreaSmall};
+  }
+
+  @media screen and (max-width: ${screenXSmall}) {
+    width: ${contentsAreaXSmall};
+  }
 `;
 
 const MainContents = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
   justify-content: space-between;
+
+  @media screen and (max-width: ${screenSmall}) {
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, auto);
+    row-gap: 50px;
+  }
+
+  @media screen and (max-width: ${screenXSmall}) {
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(1, auto);
+    justify-content: center;
+  }
 `;
 
 const Line = styled.div`

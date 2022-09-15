@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { screenSmall } from '../../../global-style/theme/mediaSize';
 
 import arrowIcon from '../../../images/icons/arrow-in-circle.png';
 
@@ -16,7 +17,11 @@ function InputMail() {
 
 export default InputMail;
 
-const InputMailWrapper = styled.div``;
+const InputMailWrapper = styled.div`
+  @media screen and (max-width: ${screenSmall}) {
+    order: 1;
+  }
+`;
 
 const Title = styled.h2`
   color: #313131;

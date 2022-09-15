@@ -25,6 +25,7 @@ export default FooterHeader;
 
 const FooterHeaderWrapper = styled.div`
   width: 236px;
+  order: 0;
 `;
 
 const Text = styled.p`
