@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { screenMiddle, screenSmall, screenXSmall } from '../../../global-style/theme/mediaSize';
 
 function Section2Header() {
   return (
@@ -24,6 +25,16 @@ const Title = styled.h2`
   font-weight: 600;
   line-height: 3.5rem;
   text-align: center;
+
+  @media screen and (max-width: ${screenMiddle}) {
+    font-size: 3rem;
+    line-height: 3.315rem;
+  }
+
+  @media screen and (max-width: ${screenSmall}) {
+    font-size: 2rem;
+    line-height: 2.21rem;
+  }
 `;
 
 const Text = styled.p`
@@ -34,4 +45,21 @@ const Text = styled.p`
   font-family: roboto, sans-serif;
   line-height: 1.75rem;
   text-align: center;
+
+  @media screen and (max-width: ${screenMiddle}) {
+    width: 600px;
+    font-size: 1.125rem;
+    line-height: 1.575rem;
+  }
+
+  @media screen and (max-width: ${screenSmall}) {
+    width: 500px;
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
+
+  @media screen and (max-width: ${screenXSmall}) {
+    width: auto;
+    font-size: 0.875rem;
+  }
 `;

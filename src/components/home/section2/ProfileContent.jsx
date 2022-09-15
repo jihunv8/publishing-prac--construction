@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { screenMiddle } from '../../../global-style/theme/mediaSize';
 
 function ProfileContent({ imageUrl = '', imageAlt = '', name = '', workArea = '', number = '', email = '' }) {
   return (
@@ -24,6 +25,11 @@ const ProfileImage = styled.img`
   margin-top: 20px;
   width: 120px;
   height: 120px;
+
+  @media screen and (max-width: ${screenMiddle}) {
+    width: 100px;
+    height: 100px;
+  }
 `;
 
 const Name = styled.div`
@@ -33,6 +39,11 @@ const Name = styled.div`
   font-weight: 500;
   line-height: 2.25rem;
   text-align: center;
+
+  @media screen and (max-width: ${screenMiddle}) {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+  }
 `;
 
 const WorkArea = styled.div`
@@ -52,6 +63,11 @@ const Number = styled.div`
   font-weight: 500;
   line-height: 1.6875rem;
   text-align: center;
+
+  @media screen and (max-width: ${screenMiddle}) {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 `;
 
 const Email = styled.div`
@@ -61,4 +77,9 @@ const Email = styled.div`
   font-weight: 500;
   line-height: 1.625rem;
   text-align: center;
+
+  @media screen and (max-width: ${screenMiddle}) {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 `;
