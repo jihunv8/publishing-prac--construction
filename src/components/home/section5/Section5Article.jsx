@@ -4,6 +4,7 @@ import BlogCard from './BlogCard';
 
 import blog1Image from '../../../images/blog1-img.png';
 import blog2Image from '../../../images/blog2-img.png';
+import { screenMiddle, screenSmall, screenXSmall } from '../../../global-style/theme/mediaSize';
 
 const tempTitle = 'Unleash Your Creativity';
 const tempText = 'Nine for Mortal Men, doomed to die, One for';
@@ -38,5 +39,20 @@ const Section5ArticleWrapper = styled.article`
   }
 
   &::-webkit-scrollbar-track {
+  }
+
+  @media screen and (max-width: ${screenMiddle}) {
+    padding-right: 20px;
+  }
+
+  @media screen and (max-width: ${screenSmall}) {
+    padding-left: 60px;
+    height: 371px;
+  }
+
+  @media screen and (max-width: ${screenXSmall}) {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 269px;
   }
 `;

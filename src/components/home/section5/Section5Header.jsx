@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { screenSmall, screenXSmall } from '../../../global-style/theme/mediaSize';
 
 function Section5Header() {
   return (
@@ -25,6 +26,14 @@ const Title = styled.h2`
   font-size: 3.375rem;
   font-weight: 600;
   line-height: 3.5rem;
+
+  @media screen and (max-width: ${screenSmall}) {
+    font-size: 3rem;
+  }
+
+  @media screen and (max-width: ${screenXSmall}) {
+    font-size: 2rem;
+  }
 `;
 
 const Text = styled.p`
@@ -34,4 +43,13 @@ const Text = styled.p`
   font-size: 1.25rem;
   line-height: 1.75rem;
   text-align: center;
+
+  @media screen and (max-width: ${screenSmall}) {
+    font-size: 1rem;
+    width: auto;
+  }
+
+  @media screen and (max-width: ${screenXSmall}) {
+    line-height: 1.5rem;
+  }
 `;

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import CommonButton from '../../common/buttons/CommonButton.styled';
 
 import arrowIcon from '../../../images/icons/subscribe-icon.png';
+import { screenSmall, screenXSmall } from '../../../global-style/theme/mediaSize';
 
 function Section5Footer() {
   return (
@@ -32,6 +33,15 @@ const Title = styled.h3`
   font-weight: 500;
   line-height: 3.5rem;
   text-align: center;
+
+  @media screen and (max-width: ${screenSmall}) {
+    font-size: 3rem;
+  }
+
+  @media screen and (max-width: ${screenXSmall}) {
+    width: auto;
+    font-size: 2rem;
+  }
 `;
 
 const Text = styled.p`
@@ -41,6 +51,11 @@ const Text = styled.p`
   font-size: 1.25rem;
   line-height: 1.75rem;
   text-align: center;
+
+  @media screen and (max-width: ${screenSmall}) {
+    width: auto;
+    font-size: 1rem;
+  }
 `;
 
 const SubscribeButton = styled(CommonButton)`

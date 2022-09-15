@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { screenLarge } from '../../../global-style/theme/mediaSize';
+import { screenLarge, screenMiddle, screenSmall, screenXSmall } from '../../../global-style/theme/mediaSize';
 import { getProp } from '../../../utils/styledUtil';
 import CommonButton from '../../common/buttons/CommonButton.styled';
 
@@ -29,6 +29,24 @@ const BlogCardWrapper = styled.div`
     width: 394px;
     height: 371px;
   }
+
+  @media screen and (max-width: ${screenMiddle}) {
+    width: 331px;
+    height: 312px;
+    padding-bottom: 40px;
+  }
+
+  @media screen and (max-width: ${screenSmall}) {
+    width: 394px;
+    height: 371px;
+  }
+
+  @media screen and (max-width: ${screenXSmall}) {
+    width: 285px;
+    height: 269px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 `;
 
 const Title = styled.h3`
@@ -37,6 +55,14 @@ const Title = styled.h3`
   font-size: 1.6875rem;
   font-weight: bold;
   line-height: 2.125rem;
+
+  @media screen and (max-width: ${screenMiddle}) {
+    font-size: 1.375rem;
+  }
+
+  @media screen and (max-width: ${screenXSmall}) {
+    font-size: 1.125rem;
+  }
 `;
 
 const Text = styled.p`
@@ -44,6 +70,14 @@ const Text = styled.p`
   color: #fff;
   font-family: source-sans-pro, sans-serif;
   line-height: 1.25rem;
+
+  @media screen and (max-width: ${screenMiddle}) {
+    margin-top: 16px;
+  }
+
+  @media screen and (max-width: ${screenXSmall}) {
+    font-size: 0.875rem;
+  }
 `;
 
 const ReadMoreButton = styled(CommonButton)`
@@ -51,4 +85,10 @@ const ReadMoreButton = styled(CommonButton)`
   width: 202px;
   color: #fff;
   border-color: #fff;
+
+  @media screen and (max-width: ${screenMiddle}) {
+    margin-top: 28px;
+    font-size: 1rem;
+    min-height: 56px;
+  }
 `;
