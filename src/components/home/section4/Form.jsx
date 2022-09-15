@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { screenSmall } from '../../../global-style/theme/mediaSize';
 import CommonButton from '../../common/buttons/CommonButton.styled';
 
 function Form() {
@@ -31,6 +32,11 @@ const Input = css`
   color: #313131;
   font-size: 1.125rem;
   line-height: 1.6875rem;
+
+  @media screen and (max-width: ${screenSmall}) {
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
 `;
 
 const OtherInput = css`

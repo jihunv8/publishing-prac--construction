@@ -1,5 +1,15 @@
 import styled from 'styled-components';
-import { contentsAreaLarge, contentsAreaXLarge, screenLarge } from '../../../global-style/theme/mediaSize';
+import {
+  contentsAreaLarge,
+  contentsAreaMiddle,
+  contentsAreaSmall,
+  contentsAreaXLarge,
+  contentsAreaXSmall,
+  screenLarge,
+  screenMiddle,
+  screenSmall,
+  screenXSmall,
+} from '../../../global-style/theme/mediaSize';
 
 import Form from './Form';
 import Section4Header from './Section4Header';
@@ -33,12 +43,28 @@ const ContentsArea = styled.div`
   @media screen and (max-width: ${screenLarge}) {
     width: ${contentsAreaLarge};
   }
+
+  @media screen and (max-width: ${screenMiddle}) {
+    width: ${contentsAreaMiddle};
+  }
+
+  @media screen and (max-width: ${screenSmall}) {
+    width: ${contentsAreaSmall};
+  }
+
+  @media screen and (max-width: ${screenXSmall}) {
+    width: ${contentsAreaXSmall};
+  }
 `;
 
 const Seciton4Article = styled.article`
   margin-top: 80px;
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: ${screenSmall}) {
+    flex-direction: column;
+  }
 `;
 
 const Image = styled.img`
@@ -47,5 +73,14 @@ const Image = styled.img`
 
   @media screen and (max-width: ${screenLarge}) {
     width: 520px;
+  }
+
+  @media screen and (max-width: ${screenLarge}) {
+    width: 360px;
+  }
+
+  @media screen and (max-width: ${screenSmall}) {
+    width: auto;
+    margin-top: 60px;
   }
 `;
