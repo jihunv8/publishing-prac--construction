@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 import backgroundImage from '../../../images/section3-bg.png';
 import bigDoubleQuote from '../../../images/icons/big-double-quote.png';
-import { screenLarge } from '../../../global-style/theme/mediaSize';
+import { screenLarge, screenMiddle, screenSmall, screenXSmall } from '../../../global-style/theme/mediaSize';
 
 function Section3() {
   return (
@@ -50,6 +50,20 @@ const Contents = styled.div`
   @media screen and (max-width: ${screenLarge}) {
     width: 760px;
   }
+
+  @media screen and (max-width: ${screenMiddle}) {
+    width: 640px;
+    padding-top: 120px;
+    padding-bottom: 200px;
+  }
+
+  @media screen and (max-width: ${screenSmall}) {
+    width: 400px;
+  }
+
+  @media screen and (max-width: ${screenXSmall}) {
+    width: 280px;
+  }
 `;
 
 const Title = styled.h2`
@@ -58,6 +72,18 @@ const Title = styled.h2`
   font-weight: 500;
   line-height: 4.75rem;
   text-align: center;
+
+  @media screen and (max-width: ${screenMiddle}) {
+    font-size: 3rem;
+  }
+
+  @media screen and (max-width: ${screenSmall}) {
+    font-size: 2.5rem;
+  }
+
+  @media screen and (max-width: ${screenXSmall}) {
+    font-size: 1.75rem;
+  }
 `;
 
 const Quote = css`
@@ -67,6 +93,21 @@ const Quote = css`
   width: 91px;
   height: 64px;
   position: absolute;
+
+  @media screen and (max-width: ${screenMiddle}) {
+    width: 70px;
+    height: 50px;
+  }
+
+  @media screen and (max-width: ${screenSmall}) {
+    width: 50px;
+    height: 36px;
+  }
+
+  @media screen and (max-width: ${screenSmall}) {
+    width: 30px;
+    height: 21px;
+  }
 `;
 
 const Text = styled.p`
@@ -76,10 +117,33 @@ const Text = styled.p`
   line-height: 1.75rem;
   position: relative;
 
+  @media screen and (max-width: ${screenMiddle}) {
+    font-size: 1rem;
+  }
+
+  @media screen and (max-width: ${screenXSmall}) {
+    font-size: 0.875rem;
+  }
+
   &::before {
     ${Quote}
     top: -64px;
     left: -91px;
+
+    @media screen and (max-width: ${screenMiddle}) {
+      top: -50px;
+      left: -70px;
+    }
+
+    @media screen and (max-width: ${screenSmall}) {
+      top: -36px;
+      left: -50px;
+    }
+
+    @media screen and (max-width: ${screenXSmall}) {
+      top: -21px;
+      left: -30px;
+    }
   }
 
   &::after {
@@ -87,5 +151,20 @@ const Text = styled.p`
     bottom: -64px;
     right: -91px;
     transform: rotate(180deg);
+
+    @media screen and (max-width: ${screenMiddle}) {
+      bottom: -50px;
+      right: -70px;
+    }
+
+    @media screen and (max-width: ${screenSmall}) {
+      bottom: -36px;
+      right: -50px;
+    }
+
+    @media screen and (max-width: ${screenXSmall}) {
+      bottom: -21px;
+      right: -30px;
+    }
   }
 `;
