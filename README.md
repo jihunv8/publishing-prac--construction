@@ -25,3 +25,9 @@ npm start
 <br/>
 
 ### 결과물
+![GIF 2022-09-16 오전 9-42-04](https://user-images.githubusercontent.com/78804014/190532723-2f3fed22-4493-4a32-82c0-73cbd39c18ca.gif)
+
+#### 반응형
+![GIF 2022-09-16 오전 9-43-14](https://user-images.githubusercontent.com/78804014/190532822-4036fd8a-23b0-40e8-b250-d76c2f1e09f9.gif)
+
+
