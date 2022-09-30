@@ -25,9 +25,39 @@ npm start
 <br/>
 
 ### 결과물
-![GIF 2022-09-16 오전 9-42-04](https://user-images.githubusercontent.com/78804014/190532723-2f3fed22-4493-4a32-82c0-73cbd39c18ca.gif)
+### Full Page
 
-#### 반응형
-![GIF 2022-09-16 오전 9-43-14](https://user-images.githubusercontent.com/78804014/190532822-4036fd8a-23b0-40e8-b250-d76c2f1e09f9.gif)
+<details>
+  <summary>x-large (1440px 초과)</summary>
+  <div markdown="1">
+    <img alt='full-page-x-large' src='https://user-images.githubusercontent.com/78804014/193195477-cced2b54-bb7f-4e76-b0c4-6ca133ca09d1.png'/>
+  </div>
+</details>
 
+<details>
+  <summary>large (1440px 이하)</summary>
+  <div markdown="1">
+    <img alt='full-page-large' src='https://user-images.githubusercontent.com/78804014/193195464-26cfeac7-edec-4460-bfce-af083db29262.png'/>
+  </div>
+</details>
 
+<details>
+  <summary>middle (1200px 이하)</summary>
+  <div markdown="1">
+    <img alt='full-page-middle' src='https://user-images.githubusercontent.com/78804014/193195454-88a67a05-2f57-4055-9d83-7cf19f0aa723.png'/>
+  </div>
+</details>
+
+<details>
+  <summary>small (840px 이하)</summary>
+  <div markdown="1">
+    <img alt='full-page-small' src='https://user-images.githubusercontent.com/78804014/193195450-dac69842-56b0-4167-9c47-0828e05ee337.png'/>
+  </div>
+</details>
+
+<details>
+  <summary>x-small (640px 이하)</summary>
+  <div markdown="1">
+    <img alt='full-page-x-small' src='https://user-images.githubusercontent.com/78804014/193195438-7768c0c1-1d2e-46ef-a1d1-d45c2b778c82.png'/>
+  </div>
+</details>
