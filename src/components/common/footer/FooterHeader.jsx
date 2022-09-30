@@ -6,6 +6,7 @@ import SNSButton from './SNSButton';
 import facebookIcon from '../../../images/icons/facebook.png';
 import twiterIcon from '../../../images/icons/twiter.png';
 import instaIcon from '../../../images/icons/insta.png';
+import { screenSmall } from '../../../global-style/theme/mediaSize';
 
 function FooterHeader() {
   return (
@@ -25,7 +26,10 @@ export default FooterHeader;
 
 const FooterHeaderWrapper = styled.div`
   width: 236px;
-  order: 0;
+
+  @media screen and (max-width: ${screenSmall}) {
+    order: 0;
+  }
 `;
 
 const Text = styled.p`
